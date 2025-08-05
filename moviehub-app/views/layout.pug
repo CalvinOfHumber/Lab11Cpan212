@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title MovieTheatre 
+    link(rel="stylesheet", href="/style.css")
+  body
+    header
+      h2 MovieTheatre
+      if currentUser
+        p Logged in as #{currentUser} |
+          a(href="/logout") Logout
+      else
+        a(href="/login") Login |
+        a(href="/register") Register
+
+    hr
+    block content
